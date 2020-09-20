@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>🅱️ee 🐝</title>
+        <link rel="stylesheet" href="bee.css">
+    </head>
+    <body onload="modeForm.reset(); difficultyForm.reset();">
+        <div>
+            <center>
+                <h1>🅱️ee 🐝</h1>
+                <div id="options">
+                    <div id="modeDiv">
+                        <span>Please select the mode:</span>
+                        <form id="modeForm">
+                            <input type="radio" id="practice" name="mode" value="1" checked onclick="setMode(1)">
+                            <label for="easy">Practice</label>
+                            <input type="radio" id="challenge" name="mode" value="2" onclick="setMode(2)">
+                            <label for="medium">Challenge</label>
+                        </form>
+                    </div>
+                    <div id="difficultyDiv">
+                        <span>Please select the difficulty:</span>
+                        <form id="difficultyForm">
+                            <input type="radio" id="easy" name="difficulty" value="1" checked onclick="setDifficulty(1)">
+                            <label for="easy">Easy</label>
+                            <input type="radio" id="medium" name="difficulty" value="2" onclick="setDifficulty(2)">
+                            <label for="medium">Medium</label>
+                            <input type="radio" id="hard" name="difficulty" value="3" onclick="setDifficulty(3)">
+                            <label for="hard">Hard</label>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <input type="text" id="textInput" placeholder="Please enter the word" oninput="checkAnswer(this)"/>
+                    <span id="time"></span>
+                </div>
+                <br>
+                <div>
+                    <button onclick="showAnswer()" id="showAnswer">View Word</button>
+                    <button onclick="newWord()" id="newWord">New Word</button>
+                </div>
+                <br>
+                <div>
+                    <span>Ask for:</span>
+                    <button onclick="currentWord.getPronunciation()" id="pronunciation">Repeat Pronunciation</button>
+                    <button onclick="currentWord.getDefinition()" id="definition">Definition</button>
+                    <button onclick="currentWord.getPartOfSpeech()" id="partOfSpeech">Part of Speech</button>
+                    <button onclick="currentWord.getSentence()" id="sentence">Sentence</button>
+                </div>
+                <p id="hint"></p>
+            </center>
+        </div>
+        <div id="about">     
+            <h2>A🅱️out</h2>
+            <p>Your cousin has extra free time due to the quarantine and virtual school isn’t challenging enough? Do you want your kid to be the next 🏆Gokul Venkatachalam🏆? Use 🅱️ee 🐝, a website that provides exceptional spelling bee practice.</p>
+        </div>
+        <div id="how">
+            <h2>How to Use 🐝</h2>
+            <p>You begin by picking one of two modes:</p>
+            <ul>
+                <li>Practice (default): You are given a word and must type it in correctly</li>
+                <li>Challenge: You are given a word and must type it in correctly within the given time limit (2 minutes). If you get one character wrong, you immediately get the question wrong</li>
+            </ul>
+            <p>Then, you must pick a difficulty level, which range based on skill level. There are several buttons that emulate the functionalities of a normal spelling bee:</p>
+            <ul>
+                <li>View Word: The correct spelling is automatically inputted into the text box and you cannot make any changes</li>
+                <li>New Word: You are given a new word, which is automatically pronounced aloud</li>
+                <li>Repeat Punctuation: The word is spoken aloud again</li>
+                <li>Definition: The definition is displayed</li>
+                <li>Part of Speech: The part of speech is displayed</li>
+                <li>Sentence: An example sentence is displayed</li>
+            </ul>
+        </div>
+        <div id="sources">
+            <h2>Sources 🏆</h2>
+            <p>Words from "Words of the Champion: Your Key to the Bee 2020 Study Guide"</p>
+            <p>Pronounciations, definitions, parts of speach, and sentences from the (unofficial) Google Dictionary API</p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="bee.js"></script>
+    </body>
+</html>
