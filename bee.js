@@ -41,6 +41,7 @@ function setMode(m) {
 }
 
 function newWord() {
+    BeeTimer.stopTimer()
     BeeTimer.resetTimer()
     document.getElementById("textInput").style.borderColor = "black"
     if (mode == 2) {
