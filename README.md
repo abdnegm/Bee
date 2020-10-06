@@ -1,5 +1,7 @@
 # 🅱️ee 🐝
 
+Completed in 36 hours at HackMIT.
+
 ## A🅱️out
 
 Your cousin has extra free time due to the quarantine and virtual school isn’t challenging enough? Do you want your kid to be the next 🏆Gokul Venkatachalam🏆? Use 🅱️ee 🐝, a website that provides exceptional spelling bee practice.
